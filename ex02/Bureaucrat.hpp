@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:24:58 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/10 03:48:47 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:20:26 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ public:
 	int				getGrade(void) const;
 	void			upRank(void);
 	void			unRank(void);
-	void			upRank(int add);
-	void			unRank(int remove);
+	void			upRank(unsigned int add);
+	void			unRank(unsigned int remove);
 	void			signForm(const AForm &form);
 	void			executeForm(AForm const &form) const;
 

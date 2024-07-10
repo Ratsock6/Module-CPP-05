@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:25:01 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/10 16:23:25 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:19:39 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int main()
 
 	try
 	{
-		timbre.beSigned(john);
 		timbre.beSigned(john);
 	}
 	catch(std::exception &e)

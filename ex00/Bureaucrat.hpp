@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:24:58 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/10 16:18:45 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:20:12 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ public:
 	int				getGrade(void);
 	void			upRank(void);
 	void			unRank(void);
-	void			upRank(int add);
-	void			unRank(int remove);
+	void			upRank(unsigned int add);
+	void			unRank(unsigned int remove);
 
 	class GradeTooHighException: public std::exception
 	{

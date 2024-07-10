@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 13:24:05 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/10 03:48:58 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:20:34 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	Bureaucrat::unRank(void)
 {
 	unRank(1);
 }
-void	Bureaucrat::upRank(int add)
+void	Bureaucrat::upRank(unsigned int add)
 {
 	grade -= add;
 	if (grade >= 1)
@@ -54,7 +54,7 @@ void	Bureaucrat::upRank(int add)
 	grade = 1;
 	throw Bureaucrat::GradeTooHighException();
 }
-void	Bureaucrat::unRank(int remove)
+void	Bureaucrat::unRank(unsigned int remove)
 {
 	grade += remove;
 	if (grade <= 150)

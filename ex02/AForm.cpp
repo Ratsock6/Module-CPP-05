@@ -51,7 +51,7 @@ void	AForm::beSigned(const Bureaucrat &bureaucrat)
 	if (bureaucrat.getGrade() > this->gradeRequiertToSign)
 		throw AForm::GradeTooLowException();
 	if (this->sign)
-		throw Form::AlreadySign();
+		throw AForm::AlreadySign();
 	this->sign = true;
 }
 std::string const	AForm::getName() const
