@@ -1,4 +1,4 @@
-NAME := bureaucrat02
+NAME := bureaucrat03
 
 CFLAGS := -g -Werror -Wall -Wextra -std=c++98
 
@@ -7,7 +7,8 @@ SRC :=	main.cpp \
 		AForm.cpp \
 		ShrubberyCreationForm.cpp \
 		RobotomyRequestForm.cpp \
-		PresidentialPardonForm.cpp
+		PresidentialPardonForm.cpp \
+		Intern.cpp
 OBJ := $(SRC:.cpp=.o)
 
 %.o:		%.cpp

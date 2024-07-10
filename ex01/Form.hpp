@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 00:00:47 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/04 17:34:53 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:30:29 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ class Form
 		};
 
 		class GradeTooLowException: public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
+		class AlreadySign: public std::exception
 		{
 			public:
 				virtual const char* what() const throw();

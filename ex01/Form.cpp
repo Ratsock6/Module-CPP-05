@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 00:17:14 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/08 16:12:05 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:31:31 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	Form::beSigned(const Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->gradeRequiertToSign)
 		throw Form::GradeTooLowException();
+	if (this->sign)
+		throw Form::AlreadySign();
 	this->sign = true;
 }
 std::string	Form::getName() const
@@ -70,6 +72,11 @@ const char* Form::GradeTooHighException::what() const throw()
 const char* Form::GradeTooLowException::what() const throw()
 {
 	return ("Too Low Exception");
+}
+
+const char* Form::AlreadySign::what() const throw()
+{
+	return ("Form Already Sign");
 }
 
 std::ostream &operator<<(std::ostream &os, Form &form) {

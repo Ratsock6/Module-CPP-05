@@ -6,50 +6,32 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:25:01 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/07/10 16:23:25 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:12:05 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "Intern.hpp"
 
 int main()
 {
-	Bureaucrat steve("Steve", 3);
-	Bureaucrat john("John", 148);
+	Intern		intern;
+	Bureaucrat	john("John", 1);
+	AForm		*sc(intern.makeForm("shrubbery creation", "sc"));
+	AForm		*rr(intern.makeForm("robotomy request", "rr"));
+	AForm		*pp(intern.makeForm("presidential pardon", "pp"));
 
-	Form timbre("Timbre fiscal", 30, 20);
-	Form impot("Declaration d'impots", 150, 20);
+	intern.makeForm("Nothing", "Nothing");
 
-	steve.signForm(timbre);
-	john.signForm(timbre);
-	john.signForm(impot);
+	john.signForm(*sc);
+	john.signForm(*rr);
+	john.signForm(*pp);
 
-	try
-	{
-		timbre.beSigned(john);
-		timbre.beSigned(john);
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	john.executeForm(*sc);
+	john.executeForm(*rr);
+	john.executeForm(*pp);
 
-	try
-	{
-		Form invalidLow("Invalid", 151, 20);
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	try
-	{
-		Form invalidHigh("Invalid", 0, 20);
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	delete sc;
+	delete rr;
+	delete pp;
 }
